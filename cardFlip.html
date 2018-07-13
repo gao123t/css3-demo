@@ -68,14 +68,16 @@
 
     .banner img:first-child {
       z-index: 2;
-
+      /* 设置 opacity 解决页面在客户端跳转拉动过程中页面内容显示 */
+      opacity: 1;
       -webkit-transform: rotateY(0);
       -moz-transform: rotateY(0);
       transform: rotateY(0);
     }
 
     .banner.clickBanner img:first-child {
-      z-index: 2;
+      z-index: 1;
+      opacity: 0;
       /* 点击之后从正面顺时针到背面 */
       -webkit-transform: rotateY(-180deg);
       -moz-transform: rotateY(-180deg);
@@ -84,14 +86,15 @@
 
     .banner img:last-child {
       z-index: 1;
-
+      opacity: 0;
       -webkit-transform: rotateY(180deg);
       -moz-transform: rotateY(180deg);
       transform: rotateY(180deg);
     }
 
     .banner.clickBanner img:last-child {
-      z-index: 1;
+      z-index: 2;
+      opacity: 1;
       /* 点击之后从背面顺时针到正面 */
       -webkit-transform: rotateY(0);
       -moz-transform: rotateY(0);
