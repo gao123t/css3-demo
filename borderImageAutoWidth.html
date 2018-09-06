@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover'>
+  <script src="https://g.alicdn.com/mtb/??lib-flexible/0.3.2/flexible_css.js,lib-flexible/0.3.2/flexible.js"></script>
+  <title>border-image 的应用实例</title>
+</head>
+
+<body>
+  <style>
+    #app {
+      width: 6.375rem;
+      height: 9.5625rem;
+      margin: 1rem auto;
+    }
+
+    .hb-amount {
+      height: .625rem;
+      line-height: .625rem;
+      color: #f4436d;
+      float: left;
+      /* 兼容(can i use):border-style 和border-width属性必须明确（不能设置 none 或者0），这样 border-images 才能工作。 */
+      border: 0 solid transparent;
+      border-width: 1px 1rem 1px .215rem;
+      /* 上下左右的留空（即除了需要自适应伸长的宽度高度范围，其余背景的区域间距。）*/
+      border-image-source: url('static/images/hongbao.png');
+      border-image-slice: 2 110 2 19;
+      /* 单位默认是 px,但是不能加 px，会报错。 */
+      border-image-repeat: round stretch;
+
+      -webkit-border-image: url('https://y.taofen8.com/a77884ad506b4ceab47d27743eda4018.jpg') 2 110 2 19 round stretch;
+      /* border-image: url('https://y.taofen8.com/a77884ad506b4ceab47d27743eda4018.jpg') 2 110 2 19 round stretch; */
+
+      /* 上面为合并写法 */
+    }
+
+    #eg1 .content{
+      border: 15px solid transparent;
+      width: 250px;
+      padding: 10px 20px;
+      border-image-source: url(/i/border.png);
+      border-image-slice: 30;
+      border-image-width: initial;
+      border-image-outset: initial;
+      border-image-repeat: stretch;
+      -webkit-border-image: url(/i/border.png) 30 fill stretch;
+    }
+  </style>
+  <div id="app" class="fs12">
+    <div id="eg1">
+      <p>border-image 应用：打开控制台，随意更改红包金额。查看背景部分的变化</p>
+      <div class="hb-amount">¥１</div>
+    </div>
+    <div id="eg2">
+      <p>border-image 值为 url:</p>
+      <div class="content"></div>
+    </div>
+  </div>
+</body>
+
+</html>

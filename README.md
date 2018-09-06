@@ -1,11 +1,30 @@
-日常整理的 css3特效。
-## 一.卡片翻转特效
-[页面效果访问地址跳转](http://htmlpreview.github.io/?https://github.com/gao123t/css3-demo/blob/master/cardFlip.html)
-效果呈现：
-![效果呈现](static/images/卡片翻转特效.gif)
-### 特效bug 整理：
-#### 1. 跳转过程中背面会显示出来的问题
-**场景**
-![跳转过程中背面显示的问题](static/images/翻转特效应用中的bug场景.gif)
-**解决方案**
->通过在更改正面背面的透明度。正面的透明度设置为1，背面的透明度设置为0。即可解决此问题。
+# css3-demo
+
+> A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
